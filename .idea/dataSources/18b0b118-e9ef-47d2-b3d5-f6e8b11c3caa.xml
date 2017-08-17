@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sinkon-mall">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="sinkon_mall">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="db_blog"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="pms"/>
+    <schema id="8" parent="1" name="test"/>
+    <schema id="9" parent="1" name="txwl"/>
+    <table id="10" parent="2" name="USER"/>
+    <column id="11" parent="10" name="USER_ID">
+      <Position>1</Position>
+      <Comment>自增ID</Comment>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="12" parent="10" name="MEMBER_ID">
+      <Position>2</Position>
+      <Comment>会员ID</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="13" parent="10" name="OPEN_ID">
+      <Position>3</Position>
+      <Comment>唯一标识</Comment>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="14" parent="10" name="HEAD_IMG_URL">
+      <Position>4</Position>
+      <Comment>头像</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="15" parent="10" name="USER_NAME">
+      <Position>5</Position>
+      <Comment>用户昵称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="16" parent="10" name="COUNTRY">
+      <Position>6</Position>
+      <Comment>国家</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="17" parent="10" name="PROVINCE">
+      <Position>7</Position>
+      <Comment>省份</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="18" parent="10" name="CITY">
+      <Position>8</Position>
+      <Comment>城市</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="19" parent="10" name="SEX">
+      <Position>9</Position>
+      <Comment>性别（0-未知，1-男，2-女）</Comment>
+      <DataType>varchar(4)|0</DataType>
+    </column>
+    <column id="20" parent="10" name="LANGUAGE">
+      <Position>10</Position>
+      <Comment>语言</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="21" parent="10" name="ATTENTION_STATE">
+      <Position>11</Position>
+      <Comment>关注状态</Comment>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="22" parent="10" name="CHANNEL_ID">
+      <Position>12</Position>
+      <Comment>渠道ID</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="10" name="CREATE_TIME">
+      <Position>13</Position>
+      <Comment>加入时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="24" parent="10" name="UPDATE_TIME">
+      <Position>14</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="25" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>USER_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

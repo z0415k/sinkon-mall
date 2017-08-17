@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sinkon.dao.UserDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+	<select id="getUserByOpenId" resultType="com.sinkon.entity.User" parameterType="String">
+		SELECT * FROM USER WHERE OPEN_ID = #{openId}
+	</select>
+	
+ <insert id="addUser" parameterType="com.sinkon.entity.User" useGeneratedKeys="true" keyProperty="USER_ID">
+<!-- 	<selectKey keyProperty="remark_code" resultType="java.lang.String" order="BEFORE"> -->
+<!-- 	    select uuid() a FROM dual -->
+<!-- 	</selectKey> -->
+	INSERT INTO USER
+	(MEMBER_ID
+	,OPEN_ID
+	,HEAD_IMG_URL
+	,USER_NAME
+	,COUNTRY
+	,PROVINCE
+	,CITY
+	,SEX
+	,LANGUAGE
+	,ATTENTION_STATE
+	,CHANNEL_ID
+	,CREATE_TIME
+	,UPDATE_TIME
+	)VALUES(
+	 #{memberId}
+	,#{openId}
+	,#{headImgUrl}
+	,#{userName}
+	,#{country}
+	,#{province}
+	,#{city}
+	,#{sex}
+	,#{language}
+	,'Y'
+	,#{channelId}
+	,sysdate()
+	,sysdate()
+	);
+</insert>
+	
+</mapper>
